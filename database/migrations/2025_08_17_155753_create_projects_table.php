@@ -15,18 +15,10 @@ return new class extends Migration
         $table->id();
         $table->string('name');
         $table->text('client')->nullable();
-        $table->string('email')->nullable();
-        $table->string('phone')->nullable();
-        $table->string('adress')->nullable();
-        $table->string('status')->default('planned'); // e.g., planned, in
         $table->date('deadline')->nullable(); // Project deadline
         $table->decimal('budget', 15, 2)->default(0);
         $table->string('location')->nullable();
-        $table->string('manager')->nullable();
-        $table->string('client_id')->nullable(); // Optional: related client
-        $table->string('manager_id')->nullable(); // Optional: manager responsible
-        $table->string('created_by')->nullable(); // User who created the project
-        $table->string('updated_by')->nullable(); // User who last updated the project
+        $table->string('manager')->nullable(); // Optional: manager responsible
         $table->date('created_at')->nullable();
         $table->date('updated_at')->nullable();
         $table->timestamps();
