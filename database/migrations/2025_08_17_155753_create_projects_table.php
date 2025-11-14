@@ -19,8 +19,6 @@ return new class extends Migration
         $table->decimal('budget', 15, 2)->default(0);
         $table->string('location')->nullable();
         $table->string('manager')->nullable(); // Optional: manager responsible
-        $table->date('created_at')->nullable();
-        $table->date('updated_at')->nullable();
         $table->timestamps();
     });
 }
