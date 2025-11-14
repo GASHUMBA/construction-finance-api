@@ -29,7 +29,6 @@ return new class extends Migration
         $table->string('updated_by')->nullable(); // User who last updated the project
         $table->date('created_at')->nullable();
         $table->date('updated_at')->nullable();
-        $table->foreignId('client_id')->constrained()->onDelete('cascade');
         $table->timestamps();
     });
 }
