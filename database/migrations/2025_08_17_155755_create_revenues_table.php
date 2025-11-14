@@ -15,6 +15,7 @@ return new class extends Migration
         $table->id();
         $table->foreignId('project_id')->constrained()->onDelete('cascade');
         $table->decimal('amount', 15, 2);
+         $table->decimal('amount_remaining', 15, 2);
         $table->date('payment_date');
         $table->string('payment_method')->nullable(); // bank, cash, transfer
         $table->string('invoice_number')->nullable();
